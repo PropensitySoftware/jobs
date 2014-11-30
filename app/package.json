@@ -1,6 +1,10 @@
 {
   "name": "application-name",
   "version": "0.0.1",
+  "repository": {
+	"type": "git",
+	"url": "http://github.com/propensitysoftware/jobs"
+  },
   "dependencies": {
     "body-parser": "^1.8.1",
     "cors": "^2.4.2",
