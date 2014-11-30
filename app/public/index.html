@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="sim" ng-controller="AppCtrl as app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{{app.resources.length}}</title>
+
+    <link rel="stylesheet" href="dist/css/main.min.css"/>
+
+</head>
+<body>
+
+<div id="main">
+
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#side-nav-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                <span class="navbar-brand" >
+                    Assessment &amp; Accreditation Management System
+                </span>
+        </div>
+
+        <ul class="nav top-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">mnuss<span class="glyphicon glyphicon-cog" style="padding-left: 5px" /></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="collapse navbar-collapse" id="side-nav-collapse">
+
+            <ul class="nav navbar-nav side-nav">
+                <li class="active">
+                    <a href="index.html">Self Study</a>
+                </li>
+                <li>
+                    <a href="charts.html">Assessments<span class="badge pull-right">1</span></a>
+                </li>
+                <li>
+                    <a data-target="#demo" data-toggle="collapse" href="javascript:;">Faculty</a>
+                    <ul class="collapse" id="demo">
+                        <li>
+                            <a href="#">User Accounts</a>
+                        </li>
+                        <li>
+                            <a href="#">Faculty Profiles</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div id="mainContent">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li ng-repeat="resource in app.resources">{{resource.name}}</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+
+                    <input type="text" ng-model="app.newResource" />
+                    <button class="btn btn-primary" ng-click="app.saveResource(app.newResource)">Save</button>
+                </div>
+            </div>
+            MAIN CONTAINER
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+</div>
+
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/bootstrap/bootstrap.js"></script>
+
+<script src="dist/js/app.min.js"></script>
+</body>
+</html>

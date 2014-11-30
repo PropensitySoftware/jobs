@@ -1,0 +1,8 @@
+# Created by .gitignore support plugin (hsz.mobi)
+/app/node_modules
+/app/bower_components
+/app/public/bower_components
+/app/public/dist
+/.idea
+/app/.idea
+/.vagrant

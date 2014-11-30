@@ -1,0 +1,97 @@
+@import "../../bower_components/bootstrap/less/bootstrap.less";
+@import "bootstrapOverride.less";
+@import "variables.less";
+
+
+html{height: 100%;}
+
+body {
+  background-color: @navbar-default-bg;
+  margin-top: 100px;
+  height: 100%;
+}
+
+#main {
+  padding-left: 0;
+  min-height: 100%;
+  margin-top: -@top-nav-height;
+  padding-top: @top-nav-height;
+}
+#mainContent {
+  background-color: #fff;
+  padding: 0;
+  width: 100%;
+}
+
+@media (min-width: @screen-sm) {
+
+  body {
+    margin-top: @top-nav-height;
+  }
+  #main {
+    padding-left: @side-nav-width;
+  }
+  #mainContent {
+    padding: 10px;
+  }
+
+  .side-nav {
+    background-color: @navbar-default-bg;
+    border: medium none;
+    border-radius: 0;
+    left: @side-nav-width;
+    margin-left: -@side-nav-width;
+    overflow-y: auto;
+    position: fixed;
+    top: @top-nav-height;
+    width: @side-nav-width;
+
+    & > li > a {
+      width: @side-nav-width;
+    }
+
+    & li a:hover, & li a:focus {
+      background-color: @navbar-default-link-active-bg !important;
+      outline: medium none;
+    }
+
+  }
+}
+
+.side-nav {
+  & > li > ul {
+    padding: 0;
+  }
+  & > li > ul > li > a {
+    display: block;
+    padding: 10px 15px 10px 38px;
+  }
+}
+
+.top-nav {
+  padding: 0 15px;
+
+  & > li {
+    display: inline-block;
+    float: left;
+  }
+  & > li > a {
+    line-height: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  & > .open > .dropdown-menu {
+//    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    float: left;
+    margin-top: 0;
+    position: absolute;
+  }
+  & > .open > .dropdown-menu > li > a {
+    white-space: normal;
+  }
+}
