@@ -1,4 +1,4 @@
 module.exports = {
-    db: 'mongodb://192.168.1.11:27017/sim',
+    db: 'mongodb://10.0.0.100:27017/jobs',
     port: '3000'
 }
