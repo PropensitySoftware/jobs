@@ -1,9 +1,0 @@
-
-#use the official puppet labs forge
-
-forge "http://forge.puppetlabs.com"
-
-mod "puppetlabs/stdlib"
-mod "willdurand/nodejs"
-
-

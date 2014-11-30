@@ -30,13 +30,13 @@ include nodejs
 # install bower
 package { 'bower':
   provider => 'npm',
-  require  => Class['nodejs']
+  ensure => present
 }
 
 # install grunt
 package { 'grunt-cli':
   provider => 'npm',
-  require  => Class['nodejs']
+  ensure => present
 }
 
 

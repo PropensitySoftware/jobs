@@ -4,6 +4,6 @@
 forge "http://forge.puppetlabs.com"
 
 mod "puppetlabs/stdlib"
-mod "willdurand/nodejs"
+mod "puppetlabs/nodejs"
 
 
